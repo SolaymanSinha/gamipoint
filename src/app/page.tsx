@@ -1,6 +1,4 @@
-import AddPoint from '@/components/AddPoint';
 import PointBoard from '@/components/PointBoard';
-import Rewards from '@/components/Rewards';
 
 export default function Home() {
   return (
