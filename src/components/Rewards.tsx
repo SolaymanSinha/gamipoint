@@ -4,13 +4,12 @@ import { removePoint } from '@/modules/point/removePoint';
 import React from 'react';
 
 const rewards = [
-  { no: 1, name: 'Youtube 20 Minutes', points: 30 },
-  { no: 2, name: 'Youtube 20 Minutes', points: 30 },
-  { no: 3, name: 'Youtube 20 Minutes', points: 30 },
-  { no: 4, name: 'Youtube 20 Minutes', points: 30 },
-  { no: 5, name: 'Youtube 20 Minutes', points: 30 },
-  { no: 6, name: 'Youtube 20 Minutes', points: 30 },
-  { no: 7, name: 'Youtube 20 Minutes', points: 30 },
+  { no: 1, name: 'Youtube 20 Minutes', points: 60 },
+  { no: 2, name: 'Facebook 20 Minutes', points: 60 },
+  { no: 3, name: 'Game 20 Minutes', points: 50 },
+  { no: 4, name: 'Anime 1 Episode', points: 45 },
+  { no: 5, name: 'Forbidden', points: 250 },
+  { no: 6, name: '1 Day Off', points: 1000 },
 ];
 
 const Rewards = ({
