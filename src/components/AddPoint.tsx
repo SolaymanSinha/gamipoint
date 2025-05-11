@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Field } from '@ark-ui/react/field';
 import { addPoint } from '@/modules/point/addPoint';
-import { getPointsFromDB } from '@/modules/point/getPoint';
 
 const AddPoint = ({
   setTotalPoints,
@@ -11,11 +10,7 @@ const AddPoint = ({
 }) => {
   const [minutes, setMinutes] = useState(0);
   const handleAddPoints = async () => {
-    console.log(minutes);
-
-    addPoint(minutes);
-
-    const totalPoints = await getPointsFromDB();
+    const totalPoints = await addPoint(minutes);
     setTotalPoints(totalPoints);
   };
   return (

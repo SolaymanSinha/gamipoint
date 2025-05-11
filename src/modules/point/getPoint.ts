@@ -1,10 +1,11 @@
 'use server';
 
-import { db } from '.';
+import { PointManager } from '.';
 
 // Get Points
-export const getPointsFromDB = async () => {
+export const getPointsFromDB = async (): Promise<number> => {
   'use server';
-  const totalPoint = await db.getData('/total_point');
+  const pointManager = PointManager.getInstance();
+  const totalPoint = pointManager.getTotalPoints();
   return totalPoint;
 };

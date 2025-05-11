@@ -1,10 +1,10 @@
 'use server';
 
-import { db } from '.';
+import { PointManager } from '.';
 
 // Minus point is possible
-export const removePoint = async (point: number) => {
-  'use server';
-  const totalPoint = await db.getData('/total_point');
-  await db.push('/total_point', parseInt(totalPoint) - point);
+export const removePoint = async (point: number): Promise<number> => {
+  const pointManager = PointManager.getInstance();
+  const totalPoint = pointManager.getReward(point);
+  return totalPoint;
 };

@@ -1,5 +1,4 @@
 'use client';
-import { getPointsFromDB } from '@/modules/point/getPoint';
 import { removePoint } from '@/modules/point/removePoint';
 import React from 'react';
 
@@ -18,9 +17,7 @@ const Rewards = ({
   setTotalPoints: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   const handleReward = async (point: number) => {
-    removePoint(point);
-
-    const totalPoints = await getPointsFromDB();
+    const totalPoints = await removePoint(point);
 
     setTotalPoints(totalPoints);
   };
