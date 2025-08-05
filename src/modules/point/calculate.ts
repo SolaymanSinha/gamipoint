@@ -1,5 +1,5 @@
 export const getPoints = (minutes: number) => {
-  const Unit = 1; // 1 Point per 1 Minute
+  const Unit = 0.7; // 1 Point per 1 Minute
 
   if (minutes >= 180) {
     return 250 + remaingMinutes(minutes, 180) * Unit;
